@@ -1,8 +1,4 @@
-<%@ page import="com.mojafirma.MeTweet" %>
-<%@ page import="com.google.common.base.Strings" %>
-<%@ page import="com.sdatweeter.servise.MyTweeterService" %>
-<%@ page import="java.util.Map" %>
-<%@ page import="com.sdateeter.servelets.PublishServlet" %>
+<%@ page import="com.mojafirma.model.servlet.PublishServlet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,7 +17,7 @@
         }
     }
 %>
-<%! MyTweeterService service=MyTweeterService.getInstance(); %>
+
 <form action="/publish.servlet" method="post">
     <ul>
         <li>Author <input name="author" value="<%= author %>"></li>

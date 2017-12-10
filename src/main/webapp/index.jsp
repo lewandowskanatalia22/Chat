@@ -1,5 +1,5 @@
-<%@ page import="com.mojafirma.MeTweet" %>
-<%@ page import="com.sdatweeter.servise.MyTweeterService" %>
+<%@ page import="com.mojafirma.model.chatDao.Tweet" %>
+<%@ page import="com.mojafirma.model.service.TweetService" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ page contentType="text/html" pageEncoding="utf-8" %>
 <html>
@@ -10,18 +10,18 @@
 <p>
     <a href="publish.jsp">Publish tweet</a>
 </p>
-<%! MyTweeterService service=MyTweeterService.getInstance();%>
+
 <table border="1">
     <tr>
         <td wedth="100px">Author</td>
         <td width="150px">Date</td>
         <td width="400px">Message</td>
     </tr>
-    <% for (MeTweet tweet:service.getMyTweetList()){ %>
+    <% for (Tweet tweet:service.getMyTweetList()){ %>
        <tr>
-           <td><%=tweet.getAuthor()%></td>
-           <td><%=tweet.getTime() %></td>
-           <td><%=tweet.getTweet() %></td>
+           <td><%=tweet.getUser_id()%></td>
+           <td><%=tweet.getDate_time() %></td>
+           <td><%=tweet.getMessage() %></td>
    <% } %>
 
 </table>
