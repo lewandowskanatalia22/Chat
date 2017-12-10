@@ -3,35 +3,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ page contentType="text/html" pageEncoding="utf-8" %>
 <html>
-<head>
-    <title> sda tweeter</title>
+<title>LOGIN</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-<p>
-    <a href="publish.jsp">Publish tweet</a>
-</p>
 
-<table border="1">
-    <tr>
-        <td wedth="100px">Author</td>
-        <td width="150px">Date</td>
-        <td width="400px">Message</td>
-    </tr>
-    <% for (Tweet tweet:service.getMyTweetList()){ %>
-       <tr>
-           <td><%=tweet.getUser_id()%></td>
-           <td><%=tweet.getDate_time() %></td>
-           <td><%=tweet.getMessage() %></td>
-   <% } %>
+<form>
+    <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="nick">
 
-</table>
-<%--<% MyTweeterService service = MyTweeterService.getInstance();--%>
-    <%--for (MeTweet tweet : service.getMyTweetList()) {--%>
-        <%--out.print("Tweet author: " + tweet.getAuthor() + "<br>");--%>
-        <%--out.print("Tweet message: " + tweet.getTweet() + "<br>");--%>
-        <%--out.print("Tweet time: " + tweet.getTime() + "<br>");--%>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password">
 
-    <%--}--%>
-<%--%>--%>
+        <button type="submit"><a href="tweet.jsp.jsp">Login</a></button>
+        <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+</form>
 </body>
 </html>

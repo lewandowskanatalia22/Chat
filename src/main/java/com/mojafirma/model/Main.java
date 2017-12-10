@@ -19,23 +19,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Session session = HibernateUtility.getHibernateSession();
+//
 //
 //        TweetDao tweetDao = new TweetDao();
-//        UserDao userDao = new UserDao();
-//        User user1 = new User();
+        UserDao userDao = new UserDao();
+        User user1 = new User();
 //        Tweet tweet1 = new Tweet();
 //
-//        user1.setNick("Olek");
-//        user1.setPass("ala");
+        user1.setNick("Olek");
+        user1.setPass("ala");
 //        tweet1.setMessage("no cześć :)");
 //
 //        tweet1.setDate_time(System.currentTimeMillis());
 //        tweet1.setUser(user1);
-//        userDao.addUser(user1);
+        userDao.addUser(user1);
 //        tweetDao.addMyTweet(tweet1);
 
-        HibernateUtility.closeSession();
 
     }
 }

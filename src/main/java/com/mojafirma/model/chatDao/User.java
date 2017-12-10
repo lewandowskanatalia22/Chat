@@ -28,6 +28,13 @@ public class User {
             mappedBy = "user")
     private List<Tweet> tweetList = new ArrayList<Tweet>();
 
+    public User(String nick, String pass, List<Tweet> tweetList) {
+        this.nick = nick;
+        this.pass = pass;
+        this.tweetList = tweetList;
+    }
 
+    public User() {
 
+    }
 }
