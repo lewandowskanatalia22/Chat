@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+
 public class Tweet {
 
     @Id
@@ -30,4 +30,13 @@ public class Tweet {
     @JoinColumn(name= "user_id")
     private User user;
 
+    public Tweet(Long date_time, String message, int user_id, User user) {
+        this.date_time = date_time;
+        this.message = message;
+        this.user_id = user_id;
+        this.user = user;
+    }
+
+    public Tweet() {
+    }
 }

@@ -13,7 +13,7 @@
 <body>
 <form>
 
-    <form action="tweet.jsp.jsp" method="post">
+    <form action="tweet.jsp" method="post">
         <fieldset>
             <ul>
                 <li>
